@@ -1,22 +1,40 @@
+:root {
+  --bg-light: #393e46;
+  --bg-color: #25282C;
+  --text-color: #ffe7ef;
+  --logo-color: #EE0E51;
+  --logo-light: #e07193;
+  --logo-dark: #500219;
+  --logo-lighter: #c597a5;
+  scrollbar-width: thin;
+  scrollbar-color: var(--logo-color) var(--bg-color);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--logo-color);
+}
+
+@font-face {
+  font-family: "Indie-Flower";
+  src: url('./assets/images/IndieFlower.ttf') format("truetype");
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-container {
+  background-color: var(--bg-light);
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,15 +42,255 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-top-container {
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sidebar {
+  min-width: 10vw;
+  max-width: 12vw;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  position: fixed;
+}
+
+.Sidebar-top {
+  margin-bottom: 5vh;
+
+}
+
+.Logo {
+  max-height: 20vh;
+  margin-top: 5vh;
+}
+
+.Logo:hover {
+  max-height: 22vh;
+  transition: max-height 0.5s ease;
+
+}
+
+.Sidebar-mid nav {
+  border-top: 1px solid var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sidebar-mid a {
+  border-bottom: 1px solid var(--bg-light);
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s, background-color 0.3s;
+  line-height: 4rem
+}
+
+.Sidebar-mid a:hover {
+  color: var(--logo-color);
+}
+
+.Blog-button {
+  color: var(--logo-color) !important;
+  transition: text-shadow 0.3s ease !important;
+}
+
+.Blog-button:hover {
+  text-shadow: 2px 2px #000;
+}
+
+.Sidebar-footer {
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 2vh;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.Sidebar-footer li {
+  text-align: center;
+}
+
+.Sidebar-footer li a {
+  padding: 2rem 7px;
+}
+
+.Sidebar-footer svg {
+  width: 2rem;
+  fill: var(--text-color);
+}
+
+.Sidebar-footer svg:hover {
+  transition: fill 0.3s ease;
+  fill: var(--logo-color);
+}
+
+.Canvas {
+  height: 100vh;
+  width: 90vw;
+  z-index: 0;
+}
+
+
+
+.Highlight {
+  color: var(--logo-color) !important;
+}
+
+.Light-Highlight {
+  color: var(--logo-light) !important;
+}
+
+
+
+.Main {
+  margin-left: 10vw;
+  background-image: url('./assets/images/photo-1534796636912-3b95b3ab5986.jpg');
+  backface-visibility: hidden;
+  overflow: hidden;
+  max-width: 90vw;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+.Text-area {
+  text-align: start;
+  margin-left: 4rem;
+  margin-top: 5rem;
+  min-width: 26rem;
+  position: absolute;
+  z-index: 265
+}
+
+.Bouncy {
+  justify-self: stretch;
+  font-weight: 900;
+  color: var(--text-color);
+  transition: color 0.3s, background-color 0.3s, font-size 0.3s;
+
+}
+
+.Bouncy:hover {
+  color: var(--logo-color);
+  font-size: larger;
+}
+
+.Text-area p {
+  width: fit-content;
+  font-weight: 100;
+  color: var(--logo-light);
+}
+
+.main-mid-container {
+  position: relative;
+  background-color: var(--bg-light);
+  height: 100vh;
+  max-width: 90vw;
+}
+
+.border {
+  background-image: url('./assets/images/wave.png');
+  background-repeat: repeat-x;
+  height: 8vh;
+  width: 90vw;
+  transform: rotate(180deg);
+}
+
+.borderBottom {
+  transform: rotate(0deg);
+}
+
+h2 .Bouncy {
+  color: var(--logo-light);
+}
+
+.main-mid-container p {
+  position: relative;
+  color: var(--text-color);
+  top: 6vh;
+}
+
+.main-mid-container p::before {
+  content: '<p>';
+  color: var(--logo-lighter);
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  left: 1rem;
+  margin-top: -1.5rem;
+}
+
+.main-mid-container p::after {
+  content: '</p>';
+  color: var(--logo-lighter);
+  font-weight: lighter;
+  font-size: 14px;
+  position: absolute;
+  left: 1rem;
+  top: 18vh;
+}
+
+.Text-area {
+  width: 50vw;
+}
+
+h2::before {
+  content: '<h2>';
+  color: var(--logo-lighter);
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  margin-top: -2rem;
+  left: 1rem;
+}
+
+h2::after {
+  content: '</h2>';
+  color: var(--logo-lighter);
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  left: 1rem;
+  bottom: 8rem;
+}
+
+.main-mid-container .Text-area {
+  font-family: 'Indie-Flower';
+  font-size: large;
+}
+
+.main-mid-container::before {
+  font-family: 'Indie-Flower';
+  content: '<div>';
+  color: var(--logo-lighter);
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  left: 1rem;
+}
+
+.main-mid-container::after {
+  content: '</div>';
+  color: var(--logo-lighter);
+  font-weight: 100;
+  font-size: 14px;
+  position: absolute;
+  left: 1rem;
+  bottom: 10rem;
+}
+
+.Canvas2 {
+  position: absolute;
+  height: 60vh;
+  width: 60vh;
+  left: 50vw;
+  top: 1vh;
+}
+
+.main-bottom-container {
+  min-height: 300px;
 }
