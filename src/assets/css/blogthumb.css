@@ -1,0 +1,53 @@
+.post-article {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 5rem;
+    min-height: 25vh;
+    background-color: #25282C;
+    border-radius: 20px;
+}
+
+.post-content {
+    float: left;
+    max-width: 100%;
+}
+
+.post-article .post-date {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 0;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+.post-title h5 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 28px;
+    letter-spacing: 0;
+    color: #fff;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.blog-post-content {
+    font-size: 16px;
+    color: #a7a7a7;
+    line-height: 24px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: block;
+}
+
+.tag-link {
+    text-decoration: none;
+}
+
+.tag-link:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}

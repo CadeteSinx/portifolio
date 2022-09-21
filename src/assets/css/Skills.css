@@ -1,0 +1,72 @@
+#text-area-skills {
+    width: 40vw;
+}
+
+.skills-details {
+    padding-right: 5rem;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-top: 22vh;
+}
+
+.chart {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.chart span {
+    font-size: 18px;
+    margin-bottom: 7px;
+    display: block;
+    color: #ffe7ef;
+}
+
+.chart footer {
+    background-color: #25282C;
+    height: 4px;
+}
+
+.chart footer div {
+    height: 100%;
+    width: 0px;
+    animation: progressBar 1.3s ease-in-out;
+}
+
+#React-Native div {
+    width: 98%;
+    background-color: #16CED8;
+}
+
+
+#React div {
+    width: 92%;
+    background-color: #3be6b2;
+}
+
+#Javascript div {
+    width: 90%;
+    background-color: #F39C59;
+}
+
+#HTML-CSS div {
+    width: 82%;
+    background-color: #6BF37D;
+}
+
+#Python div {
+    width: 70%;
+    background-color: #C86BF3;
+}
+
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: --percentage;
+    }
+}

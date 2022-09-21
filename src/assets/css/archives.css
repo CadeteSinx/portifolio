@@ -1,0 +1,67 @@
+:root {
+    --bg-light: #393e46;
+    --bg-color: #25282C;
+    --text-color: #ffe7ef;
+    --logo-color: #EE0E51;
+    --logo-light: #e07193;
+    --logo-dark: #500219;
+    --logo-lighter: #c597a5;
+}
+
+.Sidebar-archives {
+    min-width: 10vw;
+    max-width: 16vw;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    position: fixed;
+}
+
+.Logo-archives {
+    max-height: 15vh;
+    margin-top: 3vh;
+}
+
+.Logo-archives:hover {
+    max-height: 18vh;
+    transition: max-height 0.5s ease;
+}
+
+.Sidebar-archives p {
+    font-weight: bolder;
+    color: var(--text-color);
+    text-align: left;
+    margin-left: 5vw;
+}
+
+.tags-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 5vw;
+}
+
+.tags-navigation a {
+    text-decoration: none;
+    color: var(--logo-color);
+    border-bottom: 1px solid var(--bg-color);
+
+}
+
+.tags-navigation a:hover {
+    color: var(--logo-dark);
+}
+
+.main-bottom-container-archives {
+    max-width: 84vw;
+    min-height: 100vh;
+    float: right;
+    background-color: #393e46;
+}
+
+.blog-container-archives {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5rem;
+}

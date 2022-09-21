@@ -1,0 +1,28 @@
+.Blog-container {
+    overflow: auto;
+}
+
+.Blog-title {
+    margin: 0 20vw 4vh;
+    text-align: left;
+
+}
+
+.Blog-banner {
+    margin: 0 16vw 4vh;
+    width: 60vw;
+}
+
+.Markdown-text-main {
+    margin: 0 20vw;
+    text-align: left;
+    height: fit-content;
+}
+
+h2::before {
+    content: '';
+}
+
+h2::after {
+    content: '';
+}
